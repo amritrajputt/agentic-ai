@@ -7,7 +7,7 @@ Welcome to the **Agentic AI & Machine Learning Experiments** repository! This is
 As the repository grows, content will be organized by daily topics or features:
 
 * **[day 1/](file:///d:/google%20collab%20code/day%201)**: Text Generation Pipeline using Google's `gemma-3-1b-it`.
-* *(Future days to be added...)*
+* **[day 2/](file:///d:/google%20collab%20code/day%202)**: Basic Retrieval-Augmented Generation (RAG) Pipeline using LangChain, Qdrant, and OpenAI.
 
 ---
 
@@ -49,3 +49,28 @@ To run this pipeline, you need a Hugging Face account and an access token to loa
    ```bash
    python "day 1/pipeline.py"
    ```
+
+### Day 2: Basic RAG Pipeline
+Located in [day 2/basic rag/](file:///d:/google%20collab%20code/day%202/basic%20rag), this project implements a complete document ingestion and retrieval pipeline using LangChain, OpenAI, and a local Qdrant instance.
+
+#### Features
+* **Document Ingestion**: Parses PDF documents, splits them into manageable chunks, and indices them.
+* **Vector Database Integration**: Connects to Qdrant vector database via a local Docker instance.
+* **Retrieval-Augmented Generation**: Performs similarity searches on queries, compiles matching document chunks into the prompt's context, and invokes OpenAI's chat completion for answers.
+
+#### Setup & Execution
+1. Set up the environment variables:
+   * Populate `OPENAI_API_KEY` in the `.env` file at the root.
+2. Spin up the local Qdrant container:
+   ```bash
+   docker compose up -d
+   ```
+3. Run ingestion:
+   ```bash
+   python "day 2/basic rag/index.py"
+   ```
+4. Perform retrieval:
+   ```bash
+   python "day 2/basic rag/retrieve.py"
+   ```
+
