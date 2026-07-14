@@ -7,7 +7,7 @@ Welcome to the **Agentic AI & Machine Learning Experiments** repository! This is
 As the repository grows, content will be organized by daily topics or features:
 
 * **[day 1/](file:///d:/google%20collab%20code/day%201)**: Text Generation Pipeline using Google's `gemma-3-1b-it`.
-* **[day 2/](file:///d:/google%20collab%20code/day%202)**: Basic Retrieval-Augmented Generation (RAG) Pipeline using LangChain, Qdrant, and OpenAI.
+* *(Future days to be added...)*
 
 ---
 
@@ -50,5 +50,3 @@ To run this pipeline, you need a Hugging Face account and an access token to loa
    python "day 1/pipeline.py"
    ```
 
-### Day 2: Basic RAG Pipeline
-Located in [day 2/](file:///d:/google%20collab%20code/day%202), this implements a document ingestion and retrieval pipeline using LangChain, OpenAI (`gpt-4o-mini`), and Qdrant.
